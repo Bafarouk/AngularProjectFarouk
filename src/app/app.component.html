@@ -1,12 +1,5 @@
-<div>
-  <a class="nav-link" [routerLink]="['login']" routerLinkActive="active" > Login
-  </a>
-</div>
+<app-home></app-home>
 
-<div>
-  <a class="nav-link" [routerLink]="['register']" routerLinkActive="active" > Register
-  </a>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
-
-<app-login></app-login>
-<app-register></app-register>
