@@ -22,6 +22,12 @@
       "email": "farouk@farouk.com",
       "password": "123456",
       "id": 1
+    },
+    {
+      "username": "mehdi",
+      "email": "mehdi@mehdi.com",
+      "password": "123456",
+      "id": 2
     }
   ]
 }

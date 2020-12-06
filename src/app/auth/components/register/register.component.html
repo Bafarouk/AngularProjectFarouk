@@ -3,17 +3,21 @@
     <div class="col-md-6 offset-md-3 mt-4">
         
         <form #register="ngForm"
-        (ngSubmit)="onSubmit(register)">
+        (ngSubmit)="register.form.valid &&onSubmit(register)">
             <div class="form-group">
                 <label for="registerUsername">Username</label>
                 <input type="text"
                         name="username"
                        [(ngModel)]="user.username"
                        required
+                       [ngClass]="{ 'is-invalid': register.submitted && username.invalid }"
                        #username="ngModel"
                        class="form-control"
                        id="registerUsername"
                        placeholder="Enter username">
+                       <div *ngIf="register.submitted && username.invalid" class="invalid-feedback">
+                        <div *ngIf="username.errors.required">Username is required</div>
+                    </div>
             </div>
             <div class="form-group">
                 <label for="registerEmail">Email</label>
@@ -21,10 +25,16 @@
                        name="email"
                        [(ngModel)]="user.email"
                        required
+                       email
+                       [ngClass]="{ 'is-invalid': register.submitted && email.invalid }"
                        #email="ngModel"
                        class="form-control"
                        id="registerEmail"
                        placeholder="Enter email">
+                       <div *ngIf="register.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Email is required</div>
+                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                    </div>
             </div>
             <div class="form-group">
                 <label for="registerPassword">Password</label>
@@ -32,13 +42,19 @@
                         name="password"
                         [(ngModel)]="user.password"
                         required
+                        [ngClass]="{ 'is-invalid': register.submitted && password.invalid }"
+                        minlength="6"
                         #password="ngModel"
                        class="form-control"
                        id="registerPassword"
                        placeholder="Password">
+                       <div *ngIf="register.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
             </div>
             <button type="submit"
-                    class="btn btn-success" [disabled]="register.invalid">Register <i class="fas fa-sign-in-alt"></i></button>
+                    class="btn btn-success" >Register <i class="fas fa-sign-in-alt"></i></button>
         </form>
     </div>
 </div> 
