@@ -8,7 +8,7 @@
                 <label for="registerUsername">Username</label>
                 <input type="text"
                         name="username"
-                       ngModel
+                       [(ngModel)]="user.username"
                        required
                        #username="ngModel"
                        class="form-control"
@@ -19,7 +19,7 @@
                 <label for="registerEmail">Email</label>
                 <input type="email"
                        name="email"
-                       ngModel
+                       [(ngModel)]="user.email"
                        required
                        #email="ngModel"
                        class="form-control"
@@ -30,7 +30,7 @@
                 <label for="registerPassword">Password</label>
                 <input type="password"
                         name="password"
-                        ngModel
+                        [(ngModel)]="user.password"
                         required
                         #password="ngModel"
                        class="form-control"

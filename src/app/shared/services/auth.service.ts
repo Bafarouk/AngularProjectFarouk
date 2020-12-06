@@ -1,10 +1,41 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map, tap } from 'rxjs/operators';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+
+  constructor( private httpClient: HttpClient) { }
+
+  login(email:string, password:string) {
+    return this.httpClient.get('/api/users?email='+email+'&password='+password).subscribe((response: any) => {
+      if(response && response.length > 0){
+        console.log("login successs ")  
+      }else{
+        console.log("your not registred yet !")
+      }
+    },(error) => {
+      if(error.status == 400){
+         console.log("your not registred yet !");
+      }else if(error.status == 404){
+         console.log("data invalid");
+      }
+    })
 }
+
+register(user : User){
+  return this.httpClient.post<User>('/api/users', user, this.httpOptions)
+}
+
+
+}
+
