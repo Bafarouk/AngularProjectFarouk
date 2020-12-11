@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
 import { User } from '../models/User';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,32 @@ export class AuthService {
       })
     }
 
-  constructor( private httpClient: HttpClient) { }
+  constructor( private httpClient: HttpClient, private router: Router) { }
+
+  currentUserValue() {
+    if( localStorage.getItem('currentUser') !== null ){
+     console.log(localStorage.getItem('currentUser'));
+     return true;
+    }else{
+    return false;
+  }
+}
+
+
+
 
   login(email:string, password:string) {
     return this.httpClient.get('/api/users?email='+email+'&password='+password).subscribe((response: any) => {
       if(response && response.length > 0){
-        console.log("login successs ")  
+        console.log("login successs ");
+        localStorage.setItem('currentUser',JSON.stringify(response));
+        this.currentUserValue();
+        this.router.navigateByUrl('main');
+        
+        return true;
       }else{
-        console.log("your not registred yet !")
+        console.log("your not registred yet !");
+        return false;
       }
     },(error) => {
       if(error.status == 400){
@@ -36,6 +55,12 @@ register(user : User){
   return this.httpClient.post<User>('/api/users', user, this.httpOptions)
 }
 
+
+logout() {
+  localStorage.removeItem('currentUser');
+  this.router.navigateByUrl('');
+  
+}
 
 }
 

@@ -4,17 +4,22 @@ import { HomeComponent } from './layouts/home/home.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
+import { BodyComponent } from './components/body/body.component';
+import { MainComponent } from './layouts/main/main.component';
+import { SharedRoutingModule } from './shared-routing.module';
 
 
 
 @NgModule({
-  declarations: [HomeComponent,HeaderComponent, WeatherWidgetComponent],
+  declarations: [HomeComponent,HeaderComponent, WeatherWidgetComponent, BodyComponent, MainComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedRoutingModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    MainComponent
   ]
 })
 export class SharedModule { }

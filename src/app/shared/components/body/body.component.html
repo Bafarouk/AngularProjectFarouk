@@ -1,0 +1,16 @@
+<div className="row">  
+    <h1 class="offset-md-1">Meal Deals</h1>
+    <h5 class="offset-md-2">We take inspiration from the World's best cuisines, and you can inspire others with your meal review !</h5>
+</div>
+    
+<div class="container">
+    <div class="row row-content align-items-center ">
+        <div class="col-12 col-sm-10 order-sm-first">
+            <h3>Check The weather and choose a Meal for the day</h3>
+            <a [routerLink]="['register']" routerLinkActive="router-link-active"  class="btn btn-info mt-3"> Create a profile  <i class="fa fa-user-plus"></i></a>
+        </div>
+        <div class="col-12 col-sm-2 order-sm-last">
+            <app-weather-widget></app-weather-widget>
+        </div>
+    </div>
+</div>
