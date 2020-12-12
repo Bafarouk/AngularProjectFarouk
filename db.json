@@ -41,7 +41,8 @@
       "title": "Tacos",
       "description": "it's a delicious tacos",
       "price": 6,
-      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg"
+      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
+      "userId" : 2
     },
     {
       "id":2,
@@ -49,7 +50,8 @@
       "title": "Spaghetti",
       "description": "it's a delicious Spaghetti",
       "price": 15,
-      "mealImg": "http://localhost:4200/assets/images/spaghetti-a-la-sauce-tomate.jpg"
+      "mealImg": "http://localhost:4200/assets/images/spaghetti-a-la-sauce-tomate.jpg",
+      "userId" : 1
     },
     {
       "id":3,
@@ -57,7 +59,8 @@
       "title": "Greek Salad",
       "description": "it's a delicious Greek Salad",
       "price": 10,
-      "mealImg": "http://localhost:4200/assets/images/Greek-Salad.jpg"
+      "mealImg": "http://localhost:4200/assets/images/Greek-Salad.jpg",
+      "userId" : 1
     }
   ]
 }

@@ -14,6 +14,7 @@ import { ViewAllMealComponent } from './components/view-all-meal/view-all-meal.c
 import { UpdateMealComponent } from './components/update-meal/update-meal.component';
 import { DeleteMealComponent } from './components/delete-meal/delete-meal.component';
 import { SearchMealByCategoryComponent } from './components/search-meal-by-category/search-meal-by-category.component';
+import { ViewMealByUserComponent } from './components/view-meal-by-user/view-meal-by-user.component';
 
 
 
@@ -28,7 +29,8 @@ import { SearchMealByCategoryComponent } from './components/search-meal-by-categ
     ViewAllMealComponent,
     UpdateMealComponent,
     DeleteMealComponent,
-    SearchMealByCategoryComponent
+    SearchMealByCategoryComponent,
+    ViewMealByUserComponent
   ],
   imports: [
     CommonModule,

@@ -22,6 +22,9 @@
           <a class="nav-link" *ngIf="test" [routerLink]="['main']" routerLinkActive="active">Meals Categories</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" *ngIf="test" [routerLink]="['view-meal-user']" routerLinkActive="active"> Your Meals</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" style="cursor:pointer" *ngIf="test" (click)="logout()">Logout</a>
         </li>
       </ul>

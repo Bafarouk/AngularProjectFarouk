@@ -34,6 +34,10 @@ export class MealService {
     return this.httpClient.get<Meal>('/api/meals/'+mealId);
   }
 
+  getMealByUser(userId) : Observable<Meal>{
+    return this.httpClient.get<Meal>('/api/meals?userId='+userId);
+  }
+
   updateMeal(meal : Meal , mealId) : Observable<Meal>{
     return this.httpClient.put<Meal>('/api/meals/'+mealId, meal);
   }

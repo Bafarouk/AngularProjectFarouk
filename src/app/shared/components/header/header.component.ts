@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.test = this.authService.currentUserValue();
-    
+
   }
   
  

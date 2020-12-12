@@ -5,4 +5,5 @@ export class Meal {
     price: number;
     mealImg: string;
     categoryId: number;
+    userId : number;
 }
