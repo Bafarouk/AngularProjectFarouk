@@ -1,33 +1,63 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
-      "username": "farouk8899",
+      "username": "Farouk ben akacha",
       "email": "farouk@farouk.com",
       "password": "123456",
       "id": 1
     },
     {
-      "username": "mehdi",
+      "username": "Mehdi",
       "email": "mehdi@mehdi.com",
       "password": "123456",
       "id": 2
+    }
+  ],
+  "categories": [
+    { "id":1 ,
+      "categoryName": "Sandwiches"
+    },
+    { 
+      "id":2 ,
+      "categoryName": "Salads "
+    },
+    {
+      "id":3,
+      "categoryName": "Pasta"
+    },
+    {
+      "id":4,
+      "categoryName": "Soups"
+    },
+    {
+      "id":5,
+      "categoryName": "Meat"
+    }
+  ],
+  "meals":[
+    {
+      "id":1,
+      "categoryId": 1,
+      "title": "Tacos",
+      "description": "it's a delicious tacos",
+      "price": 6,
+      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg"
+    },
+    {
+      "id":2,
+      "categoryId": 3,
+      "title": "Spaghetti",
+      "description": "it's a delicious Spaghetti",
+      "price": 15,
+      "mealImg": "http://localhost:4200/assets/images/spaghetti-a-la-sauce-tomate.jpg"
+    },
+    {
+      "id":3,
+      "categoryId": 2,
+      "title": "Greek Salad",
+      "description": "it's a delicious Greek Salad",
+      "price": 10,
+      "mealImg": "http://localhost:4200/assets/images/Greek-Salad.jpg"
     }
   ]
 }

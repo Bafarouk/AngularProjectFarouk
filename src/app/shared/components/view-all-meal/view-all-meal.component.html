@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row row-content align-items-center" *ngFor="let meal of mealList">
+        <div class="col-lg-4 col-md-6 mt-5 mb-4 offset-4">
+            <div class="card h-100">
+                <img class="card-img-top w-100 h-100" src="{{ meal.mealImg }}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a [routerLink]="['view-meal', meal.id]" routerLinkActive="active"> {{ meal.title }}</a>
+                    </h4>
+                    <h5>${{ meal.price }}</h5>
+                    <p class="card-text"> {{ meal.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

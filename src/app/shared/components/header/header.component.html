@@ -7,13 +7,19 @@
     <div class="collapse navbar-collapse  offset-md-1" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['']" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" *ngIf="!test" [routerLink]="['']" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link"  *ngIf="!test"  [routerLink]="['login']" routerLinkActive="active">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="!test" [routerLink]="['register']" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="test" [routerLink]="['view-all-meal']" routerLinkActive="active">Meals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="test" [routerLink]="['main']" routerLinkActive="active">Meals Categories</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="cursor:pointer" *ngIf="test" (click)="logout()">Logout</a>

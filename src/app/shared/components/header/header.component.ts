@@ -7,13 +7,17 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  test: boolean;
 
   constructor( private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.test = this.authService.currentUserValue();
+    
   }
-
-  test = this.authService.currentUserValue();
+  
+ 
+  
 
   logout(){
     this.authService.logout();

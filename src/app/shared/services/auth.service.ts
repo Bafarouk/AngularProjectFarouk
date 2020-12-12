@@ -34,9 +34,7 @@ export class AuthService {
       if(response && response.length > 0){
         console.log("login successs ");
         localStorage.setItem('currentUser',JSON.stringify(response));
-        this.currentUserValue();
-        this.router.navigateByUrl('main');
-        
+        this.router.navigate(['/main']);
         return true;
       }else{
         console.log("your not registred yet !");
@@ -58,7 +56,8 @@ register(user : User){
 
 logout() {
   localStorage.removeItem('currentUser');
-  this.router.navigateByUrl('');
+  this.router.navigate(['/body']);
+  
   
 }
 

@@ -1,6 +1,27 @@
-<p>main works! </p>
+<div class="container">
+    <div class="row row-content align-items-center">
+        <div class="col col-sm-9 offset-sm-2 top">
+            <h1 *ngFor="let u of user">WELCOME ! to Meal Deals {{u.username}} </h1>
+        </div>
+    </div>
+    <div class="row row-content align-items-center">
+        <div class="col col-sm-9 offset-sm-2">
+            <h5>you can see all the meal in the list section or you can choose par category here</h5>
+        </div> 
+    </div>
+    <div class="row row-content align-items-center">
+        <div class="col col-sm-9 offset-sm-2">
+                <ul class="list-group" *ngFor="let cat of categoryList">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a [routerLink]="['search-meal',cat.id]" routerLinkActive="active" class="list-groupe-item" >
+                            {{ cat.categoryName}}
+                        </a>
+                      <span class="badge bg-warning rounded-pill">{{ cat.id}}</span>
+                    </li>
+                  </ul>
+        </div> 
+    </div>
+</div>
 
-<h4> hello ,</h4>
-<li *ngFor="let u of user">
-    username : {{u.username}}
-</li>
+
+
