@@ -58,13 +58,10 @@ export class UpdateMealComponent implements OnInit {
       console.log(data);
       console.log("update OK");
     });
-    
-    this.resetForm();
+  
     this.modal.close();
+    window.location.reload();
   }
 
-  resetForm(){
-    this.updateForm.reset();
-  }
 
 }

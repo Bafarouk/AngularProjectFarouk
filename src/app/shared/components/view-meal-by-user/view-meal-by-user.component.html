@@ -10,7 +10,7 @@
                     <h5>${{ meal.price }}</h5>
                     <p class="card-text"> {{ meal.description }}</p>
                     <button class="btn btn-warning mr-1" (click)="open(meal)">update</button>
-                    <button class="btn btn-danger mr-1" >delete</button>
+                    <button class="btn btn-danger mr-1" (click)="openDelete(meal)">delete</button>
                 </div>
             </div>
         </div>

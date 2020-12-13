@@ -4,6 +4,7 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Meal } from '../../models/Meal';
 import { User } from '../../models/User';
 import { MealService } from '../../services/meal.service';
+import { DeleteMealComponent } from '../delete-meal/delete-meal.component';
 import { UpdateMealComponent } from '../update-meal/update-meal.component';
 
 @Component({
@@ -35,22 +36,12 @@ export class ViewMealByUserComponent implements OnInit {
     const mealModel : Meal = meal;
     const ref = this.modalService.open(UpdateMealComponent);
     ref.componentInstance.mealModel = mealModel;
-    
-    /*.result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }*/
+  openDelete(meal: Meal){
+    const mealModelDel : Meal = meal;
+    const ref = this.modalService.open(DeleteMealComponent);
+    ref.componentInstance.mealModelDel = mealModelDel;
   }
 
   

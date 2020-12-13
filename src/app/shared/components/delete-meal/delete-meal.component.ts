@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { MealService } from '../../services/meal.service';
 
 @Component({
   selector: 'app-delete-meal',
@@ -8,15 +10,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DeleteMealComponent implements OnInit {
 
-  mealId = 0 ;
+  @Input() mealModelDel;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private mealService: MealService, public modal: NgbActiveModal) { }
 
   ngOnInit(): void {
+    console.log(this.mealModelDel);
+    console.log(this.mealModelDel.id);
 
-    this.activatedRoute.params.subscribe(data => {
-      this.mealId = data.id;
-    })
+   
+  }
+
+  delete(){
+
+    console.log(this.mealModelDel.id);
+    this.mealService.deleteMeal(this.mealModelDel.id).subscribe(data => {
+
+      console.log(data);
+      console.log("delete OK");
+    });
+
+    this.modal.close();
+    window.location.reload();
+
   }
 
 }

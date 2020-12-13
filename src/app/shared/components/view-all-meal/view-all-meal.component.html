@@ -1,4 +1,11 @@
 <div class="container">
+    <div class="row row-content align-items-center">
+        <div class="col-lg-4 col-md-6 mt-5 mb-4 offset-4">
+            <button  class="btn btn-success" (click)="addMeal();">Share your Meat now here <i class="fa fa-plus-square ml-1"></i> </button>
+        </div>
+    </div>
+    
+
     <div class="row row-content align-items-center" *ngFor="let meal of mealList">
         <div class="col-lg-4 col-md-6 mt-5 mb-4 offset-4">
             <div class="card h-100">

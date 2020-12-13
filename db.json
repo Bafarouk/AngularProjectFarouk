@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "categoryName": "Salads "
+      "categoryName": "Salads"
     },
     {
       "id": 3,
@@ -51,8 +51,8 @@
       "mealImg": "http://localhost:4200/assets/images/spaghetti-a-la-sauce-tomate.jpg",
       "categoryId": 3,
       "userId": 1,
-      "price": "9",
-      "description": "it's a delicious Spaghetti "
+      "price": "14",
+      "description": "it's a delicious Spaghetti"
     },
     {
       "id": 3,
