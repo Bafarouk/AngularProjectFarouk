@@ -62,6 +62,24 @@
       "price": 10,
       "mealImg": "http://localhost:4200/assets/images/Greek-Salad.jpg",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "price": "20",
+      "description": "it's a delicious pizza",
+      "title": "Pizza",
+      "categoryId": 3,
+      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "price": "6",
+      "description": "hello",
+      "title": "makloub",
+      "categoryId": 1,
+      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
+      "id": 6
     }
   ]
 }
