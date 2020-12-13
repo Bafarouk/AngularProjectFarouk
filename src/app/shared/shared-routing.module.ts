@@ -7,21 +7,19 @@ import { UpdateMealComponent } from './components/update-meal/update-meal.compon
 import { ViewAllMealComponent } from './components/view-all-meal/view-all-meal.component';
 import { ViewMealByUserComponent } from './components/view-meal-by-user/view-meal-by-user.component';
 import { ViewMealComponent } from './components/view-meal/view-meal.component';
-import { HomeComponent } from './layouts/home/home.component';
-import { MainComponent } from './layouts/main/main.component';
 import { MainGuardGuard } from './main-guard.guard';
 
 
 
 const routes: Routes = [
-    {path: 'add-meal' ,component: AddMealComponent},
-    {path: 'view-all-meal' ,component: ViewAllMealComponent},
-    {path: 'view-meal-user' ,component: ViewMealByUserComponent},
-    {path: 'update-meal/:id' ,component: UpdateMealComponent},
-    {path: 'view-all-meal/view-meal/:id' ,component: ViewMealComponent},
-    {path: 'view-meal-user/view-meal/:id' ,component: ViewMealComponent},
-    {path: 'delete-meal/:id' ,component: DeleteMealComponent},
-    {path: 'main/search-meal/:id' ,component: SearchMealByCategoryComponent},
+    {path: 'add-meal' ,component: AddMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'view-all-meal' ,component: ViewAllMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'view-meal-user' ,component: ViewMealByUserComponent, canActivate: [MainGuardGuard]},
+    {path: 'update-meal/:id' ,component: UpdateMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'view-all-meal/view-meal/:id' ,component: ViewMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'view-meal-user/view-meal/:id' ,component: ViewMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'delete-meal/:id' ,component: DeleteMealComponent, canActivate: [MainGuardGuard]},
+    {path: 'main/search-meal/:id' ,component: SearchMealByCategoryComponent, canActivate: [MainGuardGuard]},
 
 ];
 @NgModule({

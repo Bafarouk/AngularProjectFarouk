@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imgUrl= "http://localhost:4200/assets/images/background.jpg";
   
 
 }

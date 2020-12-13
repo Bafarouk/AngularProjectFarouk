@@ -69,17 +69,44 @@
       "description": "it's a delicious pizza",
       "title": "Pizza",
       "categoryId": 3,
-      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
+      "mealImg": "http://localhost:4200/assets/images/pizza.jpg",
       "id": 5
     },
     {
-      "userId": 1,
-      "price": "6",
-      "description": "hello",
-      "title": "makloub",
+      "id": 6,
+      "title": "Burger",
+      "mealImg": "http://localhost:4200/assets/images/burger.jpg",
       "categoryId": 1,
-      "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
-      "id": 6
+      "userId": 1,
+      "price": "7",
+      "description": "the most delicious burger i ever had"
+    },
+    {
+      "userId": 1,
+      "price": "30",
+      "description": "soo delicious!",
+      "title": "Steak",
+      "categoryId": 5,
+      "mealImg": "http://localhost:4200/assets/images/steak.jpg",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "price": "25",
+      "description": "healthy and delicious !",
+      "title": "Soupe",
+      "categoryId": 4,
+      "mealImg": "http://localhost:4200/assets/images/soupe.jpg",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "price": "35",
+      "description": "sooo nicee!",
+      "title": "Chicken",
+      "categoryId": 5,
+      "mealImg": "http://localhost:4200/assets/images/chicken.jpeg",
+      "id": 9
     }
   ]
 }
