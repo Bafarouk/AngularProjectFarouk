@@ -14,53 +14,54 @@
     }
   ],
   "categories": [
-    { "id":1 ,
+    {
+      "id": 1,
       "categoryName": "Sandwiches"
     },
-    { 
-      "id":2 ,
+    {
+      "id": 2,
       "categoryName": "Salads "
     },
     {
-      "id":3,
+      "id": 3,
       "categoryName": "Pasta"
     },
     {
-      "id":4,
+      "id": 4,
       "categoryName": "Soups"
     },
     {
-      "id":5,
+      "id": 5,
       "categoryName": "Meat"
     }
   ],
-  "meals":[
+  "meals": [
     {
-      "id":1,
+      "id": 1,
       "categoryId": 1,
       "title": "Tacos",
       "description": "it's a delicious tacos",
       "price": 6,
       "mealImg": "http://localhost:4200/assets/images/tacos-a-la-viande.jpg",
-      "userId" : 2
+      "userId": 2
     },
     {
-      "id":2,
-      "categoryId": 3,
+      "id": 2,
       "title": "Spaghetti",
-      "description": "it's a delicious Spaghetti",
-      "price": 15,
       "mealImg": "http://localhost:4200/assets/images/spaghetti-a-la-sauce-tomate.jpg",
-      "userId" : 1
+      "categoryId": 3,
+      "userId": 1,
+      "price": "9",
+      "description": "it's a delicious Spaghetti "
     },
     {
-      "id":3,
+      "id": 3,
       "categoryId": 2,
       "title": "Greek Salad",
       "description": "it's a delicious Greek Salad",
       "price": 10,
       "mealImg": "http://localhost:4200/assets/images/Greek-Salad.jpg",
-      "userId" : 1
+      "userId": 1
     }
   ]
 }

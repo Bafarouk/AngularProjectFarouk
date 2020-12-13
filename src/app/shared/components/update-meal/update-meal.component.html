@@ -1,1 +1,26 @@
-<p>update-meal works!</p>
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{mealModel.title}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     <form [formGroup]="updateForm" (ngSubmit)="update();">
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" class="form-control" id="price" placeholder="Price" formControlName="priceControl" >
+          <span *ngIf="updateForm.get('priceControl').touched && updateForm.get('priceControl').hasError('required')">Enter a price</span>
+          <span *ngIf="updateForm.get('priceControl').touched && updateForm.get('priceControl').hasError('pattern')">Enter a number</span>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" rows="3" formControlName="descriptionControl"></textarea>
+          <span *ngIf="updateForm.get('descriptionControl').touched && updateForm.get('descriptionControl').hasError('required')">Put a description</span>
+        </div>
+        <button type="submit" class="btn btn-warning mr-2" [disabled]="!updateForm.valid" >update</button>
+        <button type="submit" class="btn btn-secondary" (click)="resetForm();" >Reset</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+    </div>

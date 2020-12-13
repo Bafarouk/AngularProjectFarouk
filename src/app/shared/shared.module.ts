@@ -15,6 +15,7 @@ import { UpdateMealComponent } from './components/update-meal/update-meal.compon
 import { DeleteMealComponent } from './components/delete-meal/delete-meal.component';
 import { SearchMealByCategoryComponent } from './components/search-meal-by-category/search-meal-by-category.component';
 import { ViewMealByUserComponent } from './components/view-meal-by-user/view-meal-by-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -37,6 +38,7 @@ import { ViewMealByUserComponent } from './components/view-meal-by-user/view-mea
     RouterModule,
     SharedRoutingModule,
     AuthModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomeComponent,
